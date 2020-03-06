@@ -3,7 +3,7 @@ const app = express()
 const PORT = 8081
 const bodyParser = require("body-parser")
 const connection = require("./database/database")
-const perguntaModel = require("./database/Pergunta")
+const Pergunta = require("./database/Pergunta")
 
 connection.authenticate().then(() => {
     console.log("Conectado ao banco de dados")
@@ -27,7 +27,12 @@ app.get("/perguntar", (req, res) => {
 app.post("/salvarpergunta", (req, res) => {
     var titulo = req.body.titulo
     var descricao = req.body.descricao
-    res.send("Titulo: " + titulo + "<br>" + "Descrição: " + descricao)
+    Pergunta.create({
+        titulo: titulo,
+        descricao: descricao
+    }).then(() => {
+        res.redirect("/")
+    })
 })
 
 
