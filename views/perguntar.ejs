@@ -1,7 +1,7 @@
 <%- include('./partials/header') %>
 <body>
     <%- include('./partials/navbar') %>
-    <div class="container">
+    <div class="container-pergunta">
         <div class="card" id="formulario-pergunta">
             <div class="card-header">
                 <h3>Realizar perguntas</h3>
@@ -9,10 +9,10 @@
             <div class="card-body">
                 <form method="POST" action="salvarpergunta">
                     <label>Título</label>
-                    <input type="text" placeholder="Titulo" class="form-control" name="titulo">
+                    <input type="text" placeholder="Titulo" class="form-control" name="titulo" required>
                     <br>
                     <label>Descrição</label>
-                    <textarea placeholder="Descreva a sua pergunta aqui" class="form-control" name="descricao"></textarea>
+                    <textarea placeholder="Descreva a sua pergunta aqui" class="form-control" name="descricao" required></textarea>
                     <br>
                     <button class="btn btn-dark">Perguntar</button>
                 </form>

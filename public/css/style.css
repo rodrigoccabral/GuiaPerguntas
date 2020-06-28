@@ -1,7 +1,65 @@
 body {
-    background-color: #eceff1;
+    background-color: #2f2f2f;
 }
 
 #formulario-pergunta {
     margin-top: 5hv;
+}
+
+#navbar {
+    position: relative;
+    height: 35px;
+}
+
+#imagem-navbar {
+    position: relative;
+    height: 35px;
+}
+
+h1 { 
+    font-family: MontSerrat,Tahoma,Arial,sans-serif;
+}
+
+#titulo {
+    color: #e7e2e2;
+}
+
+#n-respostas {
+    position: absolute;
+    right: 525px;
+    top: 100px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #2f2f2f;
+    text-decoration: none;
+}
+
+#speech-balloon {
+    position: absolute;
+    right: 645px;
+    top: 92px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #2f2f2f;
+    text-decoration: none;
+}
+
+.resposta {
+    color: #e7e2e2;
+}
+
+.container {
+    max-width: 850px;
+}
+
+.container-pergunta {
+    position: relative;
+    max-width: 850px;
+    top: 50px;
+    left: 200px;
+    
+}
+
+.card-footer {
+    background-color: #e7e2e2;
 }
